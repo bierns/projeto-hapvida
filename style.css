@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:ital,wght@0,100;0,200;1,100&family=Raleway:ital,wght@0,100;1,100&display=swap');
+
+:root {
+    --color-name: #D5F94B;
+    --color-logo: #F89702;
+    --color-grey: #3f3f3f;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--color-grey);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+}
+
+img {
+    width: 300px;
+    margin-left: 10px;
+}
+
+#nome {
+    color: var(--color-name);
+    font-size: 40px;
+    font-family: 'Raleway', sans-serif;
+}
+
+header a {
+    width: 250px;
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-name);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #313131;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    padding: 25px;
+    background-color: var(--color-grey);
+    text-align: justify;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.389);
+    position: relative;
+    margin: 40px;
+}
+
+card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 20px solid transparent;
+}
+
+.icon {
+    margin-bottom: 20px;
+}
+
+.icon img {
+    width: 250px;
+}
+
+.content {
+    height: 215px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.content::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(transparent, var(--color-grey))
+}
+
+.content h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 20px;
+    position: relative;
+}
+
+.content h3::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 40px;
+    background-color: var(--color-logo);
+    bottom: 4px;
+    border-radius: 100px;
+}
+
+.content p {
+    color: #b7b7b7;
+}
+
+#read_button {
+    border: none;
+    padding: 10px;
+    border-radius: 2px;
+    margin-top: 15px;
+    background-color: var(--color-logo);
+    color: #313131;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.2s ease-in-out;
+}
+
+#read_button:hover {
+    background-color: transparent;
+    color: var(--color-logo);
+    transition: all 0.2s ease-in-out;
+}
+
+.card.active .content {
+    height: auto;
+}
+
+.card.active .content::before {
+    visibility: hidden;
+}
+
+footer {
+    display: flex;
+    gap: 150px;
+    background-color: var(--color-grey);
+    font-family: 'Montserrat', sans-serif
+}
+
+footer h1 {
+    margin-left: 15px;
+    margin-top: 35px;
+}
+
+footer p {
+    margin-top: 35px;
+    color: var(--color-name);
+    font-size: large;
+}
+
+#fotos {
+    display: flex;
+    gap: 100px;
+
+}
+
+.fotos_perfil {
+    text-align: center;
+    color: #b7b7b7;
+    font-size: 31px;
+}
+
+.fotos_perfil img {
+    border-radius: 12px;
+}
+
+.insta{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+.insta img{
+    width: 40px;
+}
+
+.insta p{
+    margin-left: 20%;
+}
+.descricao{
+    font-size: 25px;
+    
+}
+
+
+
+
+@media only screen and (min-width: 895px) and (max-width: 1220px) {
+    main {
+        flex-direction: column;
+    }
+    #fotos {
+        flex-direction: column;
+        margin-top: 50px;
+    
+    }
+}
+
+
+
+@media only screen and (min-width: 475px) and (max-width: 894px) {
+    header img{
+        width: 150px;
+    }
+
+    header a {
+        font-size: 20px;
+    }
+    
+    #nome{
+        font-size: 20px;
+    }
+    
+    main {
+        flex-direction: column;
+    }
+
+    #fotos {
+        flex-direction: column;
+        margin-top: 50px;
+    
+    }
+
+    footer{
+        gap: 10px;
+    }
+    footer h1 {
+        font-size: 20px;
+    }
+    
+    footer p{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 474px) {
+
+    header img{
+        width: 100px;
+    }
+        
+    header a {
+        font-size: 20px;
+    }
+    
+    #nome{
+        font-size: 20px;
+    }
+    
+    main {
+        flex-direction: column;
+    }
+
+    #fotos {
+        flex-direction: column;
+        margin-top: 50px;
+    }
+    footer{
+        gap: 8px;
+    }
+    footer h1 {
+        font-size: 17px;
+    }
+    
+    footer p{
+        font-size: 13px;
+    }
+}

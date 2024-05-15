@@ -1,0 +1,1 @@
+Este repositório contém o trabalho realizado em colaboração com a FIAP para a empresa Hapvida. O projeto aborda uma solução tecnológica para dificuldades no meio da Saúde. Ele foi desenvolvido como parte dos requisitos acadêmicos da disciplina Responsive Web Development da FIAP. O trabalho inclui códigos em HTML, CSS e JavaScript.
